@@ -1,0 +1,15 @@
+Test Case 1: Input: 10 Expected Output: Total Cost: 23.5 Taka
+
+Test Case 2: Input: 50 Expected Output: Total Cost: 117.5 Taka Discount: 4% Grand Total: 4.7 Taka
+
+Test Case 3: Input: 0 Expected Output: Total Cost: 0 Taka
+
+Test Case 4: Input: -5 Expected Output: Invalid Input
+
+Test Case 5: Input: 100 Expected Output: Total Cost: 235 Taka
+
+Test Case 6: Input: 200 Expected Output: Total Cost: 470 Taka Discount: 4% Grand Total: 18.8 Taka
+
+Test Case 7: Input: 1 Expected Output: Total Cost: 2.35 Taka
+
+Test Case 8: Input: abc Expected Output: Invalid Input
