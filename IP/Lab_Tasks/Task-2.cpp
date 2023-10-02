@@ -15,16 +15,16 @@ int main() {
     int cgpa_times = cgpa * 100;
 
     switch (cgpa_times){
-        case 395:
-            cout << "You got gold medal";
+        case 395 ... 400:
+            cout << "You got GOLD medal";
             break;
-        case 380:
-            cout << "You got silver medal";
+        case 380 ... 394:
+            cout << "You got SILVER medal";
             break;
-        case 370:
-            cout << "You got bronze medal";
+        case 370 ... 379:
+            cout << "You got BRONZE medal";
             break;
         default:
-            cout << "You got no medal";
+            cout << "You got NO medal";
     }
 }
