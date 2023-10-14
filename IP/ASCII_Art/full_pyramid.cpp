@@ -9,7 +9,7 @@ int main()
 
     for (int i = 1; i <= lines; i++)
     {
-        for (int j = lines - 1; j >= i; j--)
+        for (int j = i; j <= lines - 1; j++)
         {
             cout << " ";
         }

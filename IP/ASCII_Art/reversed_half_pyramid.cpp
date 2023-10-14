@@ -9,7 +9,7 @@ int main()
 
     for (int i = 1; i <= lines; i++)
     {
-        for (int j = lines; j >= i; j--)
+        for (int j = i; j <= lines; j++)
         {
             cout << "*";
         }
