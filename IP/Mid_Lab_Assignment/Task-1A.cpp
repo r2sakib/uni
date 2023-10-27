@@ -18,7 +18,7 @@ int main()
 
         cin >> mark;
 
-        if (mark >= 80 && mark <= 100){
+        if (mark >= 80 && mark <= 90){
             cout << "You got A+" << endl;
         }
         else if (mark >= 70 && mark < 80){
