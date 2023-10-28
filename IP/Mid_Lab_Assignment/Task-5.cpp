@@ -7,21 +7,21 @@ int main(){
     int i, length;
     bool palin = false;
     
-    cout << "Enter a string: "; cin >> string;
+    cout << "Enter a string: "; cin >> string1;
     
-    length = strlen(string);
+    length = strlen(string1);
     
     for(i=0;i < length ;i++){
-        if(string[i] != string[length-i-1]){
+        if(string1[i] != string1[length-i-1]){
             palin=true;
             break;
            }
         }
     
     if (palin) {
-        cout << string << " is not a palindrome" << endl; 
+        cout << string1 << " is not a palindrome" << endl; 
     }    
     else {
-        cout << string << " is a palindrome" << endl; 
+        cout << string1 << " is a palindrome" << endl; 
     }
 }
