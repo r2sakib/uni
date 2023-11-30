@@ -8,6 +8,4 @@ int main() {
     {
         cout << countries[i] << endl;
     }    
-
-    return 0;
 }
