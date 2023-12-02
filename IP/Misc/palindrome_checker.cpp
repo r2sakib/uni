@@ -24,3 +24,4 @@ int main()
         cout << t << " is not a palindrome";
     }
 }
+
