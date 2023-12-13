@@ -4,6 +4,7 @@ using namespace std;
 
 const string LINE = "--------------------------------------------------------------\n";
 const string PLINE = "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n";
+const string HLINE = "#############################################################\n";
 
 class User
 {
@@ -37,7 +38,7 @@ class Student : public User
     private:
         string sID;
         string courses[5];
-        int course_count;
+        int courseCount = 0;
     public:
         Student(string n, int a, string sid) : User(n, a)
         {
@@ -46,6 +47,16 @@ class Student : public User
 
         ~Student() {};
 
+        string getSID()
+        {
+            return sID;
+        }
+
+        int getCourseCount()
+        {
+            return courseCount;
+        }
+
         void displayStudentInfo()
         {
             cout << "Name: " << getName() << endl;
@@ -53,12 +64,126 @@ class Student : public User
             cout << "ID: " << sID << endl;
         }
 
-        string getSID()
+        void displayCourses()
         {
-            return sID;
+            if (courseCount == 0)
+            {
+                cout << PLINE;
+                cout << "STUDENT DOES NOT HAVE ANY COURSES YET!\n";
+                cout << PLINE;
+            }
+            else
+            {
+                cout << PLINE;
+                cout << "COURSES\n";
+                cout << PLINE;
+
+                for (int i = 0; i < courseCount; i++)
+                {
+                    cout << "- " << courses[i] << endl;
+                }
+                cout << endl;
+            }
         }
+
+        void addCourse(string courseName)
+        {
+            courses[courseCount] = courseName;
+            courseCount++;
+        }
+
 };
 
+void loggedIn(Student student)
+{
+    int command;
+    while (true)
+    {
+        cout << LINE;
+        cout << "STUDENT PORTAL (LOGGED IN)\n";
+        cout << LINE;
+
+        cout << "1. Display Student Info\n";
+        cout << "2. Display Courses\n";
+        cout << "3. Add Courses\n";
+        cout << "4. Clear Screen\n";
+        cout << "5. Logout\n";
+
+        cout << LINE;
+        cout << "COMMAND: ";
+
+        // Input Validation
+        if (!(cin >> command))
+        {
+            cin.clear();
+            cin.ignore(10000, '\n');
+        }
+        cout << LINE;
+
+        if (command < 1 || command > 3)
+        {
+            system("cls");
+            cout << HLINE << "Invalid input! Enter numbers only.\n" << HLINE << endl;
+        }
+
+        // Display Student Info
+        if (command == 1)
+        {
+            system("cls");
+            cout << PLINE;
+            cout << "STUDENT INFO:\n";
+            cout << PLINE;
+            student.displayStudentInfo();
+            cout << endl;
+        } 
+
+        // Display Courses
+        else if (command == 2)
+        {
+            system("cls");
+            student.displayCourses();
+        }
+
+        // Add Courses
+        else if (command == 3)
+        {
+            int courseCount = student.getCourseCount();
+
+            if (courseCount < 5)
+            {
+                cout << "Enter course name: ";
+                string courseName;
+                getline(cin >> ws, courseName);
+
+                student.addCourse(courseName);
+
+                system("cls");
+                cout << PLINE;
+                cout << "COURSE ADDED SUCCESSFULLY\n";
+                cout << PLINE;
+            }
+            else
+            {
+                system("cls");
+                cout << HLINE;
+                cout << "CANNOT ADD ANY MORE COURSES!\n";
+                cout << HLINE;
+            }
+        }
+
+        // Clear Screen
+        else if (command == 4)
+        {
+            system("cls");
+        }
+
+        // Logout
+        else if (command == 5)
+        {
+            return;
+        }
+    }
+}
 
 int main() {
     cout << LINE;
@@ -67,7 +192,7 @@ int main() {
 
     cout << "Enter Student Name: ";
     string name;
-    cin >> name;
+    getline(cin >> ws, name);
     
     cout << "Enter Student Age: ";
     int age;
@@ -99,6 +224,7 @@ int main() {
         cout << LINE;
         cout << "COMMAND: ";
 
+        // Input Validation
         if (!(cin >> command))
         {
             cin.clear();
@@ -109,8 +235,8 @@ int main() {
 
         if (command < 1 || command > 3)
         {
-            cout << PLINE << "Invalid input! Enter numbers only.\n"
-                    << PLINE << endl;
+            system("cls");
+            cout << HLINE << "Invalid input! Enter numbers only.\n" << HLINE << endl;
         }
 
         // Login
@@ -124,7 +250,7 @@ int main() {
             
             cout << "Enter Student Name: ";
             string name;
-            cin >> name;
+            getline(cin >> ws, name);
 
             cout << "Enter Student ID: ";
             string sID;
@@ -132,7 +258,22 @@ int main() {
 
             if (student.getName() == name && student.getSID() == sID)
             {
-                
+                system("cls");
+
+                cout << PLINE;
+                cout << "LOGIN SUCCESSFUL\n";
+                cout << PLINE << endl;
+
+                loggedIn(student);
+
+                system("cls");
+            }
+            else
+            {
+                system("cls");
+                cout << HLINE;
+                cout << "INVALID NAME OR ID (Try again)\n";
+                cout << HLINE;
             }
         }
 
