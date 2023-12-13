@@ -293,16 +293,22 @@ int main() {
             cout << LINE;
             
             cout << "COMMAND: ";
-            int command;
-            cin >> command;
+            int cmd;
+            cin >> cmd;
 
-            if (command == 1)
+            if (cmd < 1 || cmd > 2)
+            {
+                system("cls");
+                cout << HLINE << "Invalid input! Enter numbers only.\n" << HLINE << endl;
+            }
+
+            else if (cmd == 1)
             {
                 return 0;
             }
-            else
+            else if (cmd == 2)
             {
-                command = 0;
+                cmd = 0;
                 system("cls");
             }
         }
