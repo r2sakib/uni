@@ -94,7 +94,7 @@ class Student : public User
 
 };
 
-void loggedIn(Student student)
+void loggedIn(Student &student)
 {
     int command;
     while (true)
