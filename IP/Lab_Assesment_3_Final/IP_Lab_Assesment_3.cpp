@@ -42,7 +42,7 @@ class Samsung : public Mobile
 
         ~Samsung()
         {
-            "Samsung destructor called";
+            cout << "Samsung destructor called" << endl;
         }
 };
 
@@ -59,7 +59,7 @@ class Iphone : public Mobile
 
         ~Iphone()
         {
-            "iPhone destructor called";
+            cout << "iPhone destructor called" << endl;
         }
 };
 
@@ -76,7 +76,7 @@ class Nokia : public Mobile
 
         ~Nokia()
         {
-            "Nokia destructor called";
+            cout << "Nokia destructor called" << endl;
         }
 };
 
