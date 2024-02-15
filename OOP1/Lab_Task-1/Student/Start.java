@@ -1,13 +1,19 @@
+import java.util.Scanner;
+
 public class Start {
+
 	public static void main(String []args){
-		Student s1 = new Student("Sadman", "23-52382-2", "CSE", 3.50f);
+		Scanner sc = new Scanner(System.in);
+		Scanner scStr = new Scanner(System.in);
+
+		Student s1 = new Student( scStr.nextLine(), scStr.nextLine(), scStr.nextLine(), sc.nextFloat() );
 		s1.showDetails();
 		
 		Student s2 = new Student();
-		s2.setName("Sakib");
-		s2.setId("23-52394");
-		s2.setDepartment("CSE");
-		s2.setCgpa(3.7f);
+		s2.setName(scStr.nextLine());
+		s2.setId(scStr.nextLine());
+		s2.setDepartment(scStr.nextLine());
+		s2.setCgpa(sc.nextFloat());
 		
 		s2.showDetails();
 		

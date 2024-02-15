@@ -1,7 +1,12 @@
+import java.util.Scanner;
+
 public class Start {
     public static void main (String []args) {
-        Contact c1 = new Contact("Sadman Sakib", "001", 20, "01701111111", 'M');
-        Contact c2 = new Contact("Jane Doe", "002", 29, "0158888888", 'F');
+        Scanner sc = new Scanner(System.in);
+        Scanner scStr = new Scanner(System.in);
+
+        Contact c1 = new Contact(scStr.nextLine(), scStr.nextLine(), sc.nextInt(), scStr.nextLine(), scStr.nextLine().charAt(0));
+        Contact c2 = new Contact(scStr.nextLine(), scStr.nextLine(), sc.nextInt(), scStr.nextLine(), scStr.nextLine().charAt(0));
 
         Contact c3 = new Contact();
         c3.setPersonName("Adreeta");

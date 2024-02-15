@@ -1,14 +1,18 @@
+import java.util.Scanner;
+
 public class Start {
 	public static void main (String []args) {
-		Triangle t1 = new Triangle(2, 2, 2);
+		Scanner sc = new Scanner(System.in);
+
+		Triangle t1 = new Triangle( sc.nextInt(), sc.nextInt(), sc.nextInt() );
 		t1.testTriangle();
 		t1.showDetails();
 		
-		t1.setX(4);
+		t1.setX(sc.nextInt());
 		t1.testTriangle();
 		t1.showDetails();
 		
-		t1.setY(3);
+		t1.setY(sc.nextInt());
 		t1.testTriangle();
 		t1.showDetails();
 		

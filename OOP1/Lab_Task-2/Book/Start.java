@@ -1,21 +1,25 @@
+import java.util.Scanner;
+
 public class Start {
     public static void main(String []args) {
-        
-        Book b1 = new Book("Sapiens", "Yuval Noah Harari", "001", "Non-fiction", 5);
-        Book b2 = new Book("The Da Vinci Code", "Dan Brown", "002", "Fiction", 2);
+        Scanner scStr = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+
+        Book b1 = new Book(scStr.nextLine(), scStr.nextLine(), scStr.nextLine(), scStr.nextLine(), sc.nextInt() );
+        Book b2 = new Book(scStr.nextLine(), scStr.nextLine(), scStr.nextLine(), scStr.nextLine(), sc.nextInt());
         Book b3 = new Book();
-        b3.setBookName("War and Peace");
-        b3.setBookAuthor("Leo Tolstoy");
-        b3.setBookId("003");
-        b3.setBookType("Fiction");
-        b3.setBookCopy(3);
+        b3.setBookName(scStr.nextLine());
+        b3.setBookAuthor(scStr.nextLine());
+        b3.setBookId(scStr.nextLine());
+        b3.setBookType(scStr.nextLine());
+        b3.setBookCopy(sc.nextInt());
 
         Book b4 = new Book();
-        b4.setBookName("Norwegian Wood");
-        b4.setBookAuthor("Haruki Murakami");
-        b4.setBookId("004");
-        b4.setBookType("Fiction");
-        b4.setBookCopy(5);
+        b4.setBookName(scStr.nextLine());
+        b4.setBookAuthor(scStr.nextLine());
+        b4.setBookId(scStr.nextLine());
+        b4.setBookType(scStr.nextLine());
+        b4.setBookCopy(sc.nextInt());
 
 
         b1.showDetails();

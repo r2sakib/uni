@@ -1,6 +1,11 @@
+import java.util.Scanner;   
+
 public class Start {
     public static void main (String []args) {
-        Mobile m1 = new Mobile("Sadman Sakib", "0171111111", 75, "Android", true);
+        Scanner sc = new Scanner(System.in);
+        Scanner scStr = new Scanner(System.in);
+
+        Mobile m1 = new Mobile(scStr.nextLine(), scStr.nextLine(), sc.nextInt(), scStr.nextLine(), sc.nextBoolean());
         Mobile m2 = new Mobile("Jane Doe", "016111111111", 30, "iOS", true);
         Mobile m3 = new Mobile("Jon Doe", "015111111111", 100, "iOS", true);
         Mobile m4 = new Mobile();
