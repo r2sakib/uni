@@ -6,22 +6,32 @@ public class Start {
 		Scanner sc = new Scanner(System.in);
 		Scanner scStr = new Scanner(System.in);
 
-		Student s1 = new Student( scStr.nextLine(), scStr.nextLine(), scStr.nextLine(), sc.nextFloat() );
-		s1.showDetails();
-		
-		Student s2 = new Student();
-		s2.setName(scStr.nextLine());
-		s2.setId(scStr.nextLine());
-		s2.setDepartment(scStr.nextLine());
-		s2.setCgpa(sc.nextFloat());
-		
-		s2.showDetails();
-		
-		if (s2.getCgpa() >= 2.5){
-			System.out.println(s2.getName() + " is not a probation student");
+		System.out.print("Enter number of studens: ");
+		int size = sc.nextInt();
+
+		Student students[] = new Student[size];
+
+		for (int i = 0; i < size; i++) {
+			System.out.println("Enter information for student " + (i+1));
+
+			students[i] = new Student();
+
+			System.out.print("Name: ");
+			students[i].setName(scStr.nextLine());
+
+			System.out.print("ID: ");
+			students[i].setId(scStr.nextLine());
+
+			System.out.print("Department: ");
+			students[i].setDepartment(scStr.nextLine());
+
+			System.out.print("CGPA: ");
+			students[i].setCgpa(sc.nextFloat());
 		}
-		else {
-			System.out.println(s2.getName() + " is a probation student");
+
+		for (int i = 0; i < size; i++) {
+			System.out.println("Information for student " + (i+1));
+			students[i].showDetails();
 		}
 		
 	}

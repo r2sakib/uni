@@ -5,35 +5,36 @@ public class Start {
         Scanner sc = new Scanner(System.in);
         Scanner scStr = new Scanner(System.in);
 
-        Mobile m1 = new Mobile(scStr.nextLine(), scStr.nextLine(), sc.nextInt(), scStr.nextLine(), sc.nextBoolean());
-        Mobile m2 = new Mobile("Jane Doe", "016111111111", 30, "iOS", true);
-        Mobile m3 = new Mobile("Jon Doe", "015111111111", 100, "iOS", true);
-        Mobile m4 = new Mobile();
+        System.out.print("Enter number of mobiles: ");
+        int size = sc.nextInt();
 
-        m4.setMobileOwnerName("Jon Snow");
-        m4.setMobileNumber("01312312322");
-        m4.setMobileBalance(45);
-        m4.setMobileOSName("Android");
-        m4.setLock(true);
+        Mobile mobiles[] = new Mobile[size];
 
-        m1.showDetails();
+        for (int i = 0; i < size; i++) {
+            mobiles[i] = new Mobile();
+            System.out.println("Enter information for mobile " + (i+1));
+            System.out.print("Owner Name: ");
+            mobiles[i].setMobileOwnerName(scStr.nextLine());
+            System.out.print("Mobile number: ");
+            mobiles[i].setMobileNumber(scStr.nextLine());
+            System.out.print("Mobile Balance: ");
+            mobiles[i].setMobileBalance(sc.nextDouble());
+            System.out.print("Mobile OS Name: ");
+            mobiles[i].setMobileOSName(scStr.nextLine());
+            System.out.print("Lock: ");
+            mobiles[i].setLock(sc.nextBoolean());
+        }
 
-        m1.setLock(false);
-        m1.showDetails();
-
-        m2.setLock(false);
-        m2.showDetails();
-
-        m3.setLock(false);
-        m3.showDetails();
-
-        m4.setLock(false);
-        m4.showDetails();
+        for (int i = 0; i < size; i++) {
+            System.out.println("Information for mobile " + (i+1));
+            mobiles[i].setLock(false);
+            mobiles[i].showDetails();
+        }
 
 
-        m1.setLock(false);
-        m1.recharge(50);
-        m1.adjustAfterCall(2, 3);
+        // m1.setLock(false);
+        // m1.recharge(50);
+        // m1.adjustAfterCall(2, 3);
 
     }
 }

@@ -5,36 +5,30 @@ public class Start {
         Scanner sc = new Scanner(System.in);
         Scanner scStr = new Scanner(System.in);
 
-        Contact c1 = new Contact(scStr.nextLine(), scStr.nextLine(), sc.nextInt(), scStr.nextLine(), scStr.nextLine().charAt(0));
-        Contact c2 = new Contact(scStr.nextLine(), scStr.nextLine(), sc.nextInt(), scStr.nextLine(), scStr.nextLine().charAt(0));
+        System.out.print("Enter number of contacts: ");
+        int size = sc.nextInt();
 
-        Contact c3 = new Contact();
-        c3.setPersonName("Adreeta");
-        c3.setAge(20);
-        c3.setPersonId("003");
-        c3.setMobileNumber("01622222222");
-        c3.setGender('F');
+        Contact contacts[] = new Contact[size];
 
-        Contact c4 = new Contact();
-        c4.setPersonName("Toha");
-        c4.setAge(20);
-        c4.setPersonId("004");
-        c4.setMobileNumber("01322222222");
-        c4.setGender('M');
+        for (int i = 0; i < size; i++) {
+            contacts[i] = new Contact();
 
-        c1.showDetails();
-        c1.showOperator();
+            System.out.println("Enter information for contact " + (i+1));
+            System.out.print("Name: ");
+            contacts[i].setPersonName(scStr.nextLine());
+            System.out.print("ID: ");
+            contacts[i].setPersonId(scStr.nextLine());
+            System.out.print("Age: ");
+            contacts[i].setAge(sc.nextInt());
+            System.out.print("Mobile number: ");
+            contacts[i].setMobileNumber(scStr.nextLine());
+            System.out.print("Gender: ");
+            contacts[i].setGender(scStr.nextLine().charAt(0));
+        }
 
-        c2.showDetails();
-        c2.showOperator();
-        
-        c3.showDetails();
-        c3.showOperator();
-
-        c4.showDetails();
-        c4.showOperator();
-
-        System.out.println(c1.getPersonName());
-        System.out.println(c1.getMobileNumber());
+        for (int i = 0; i < size; i++) {
+            System.out.println("Information for student " + (i+1));
+            contacts[i].showDetails(); 
+        }
     }
 }
