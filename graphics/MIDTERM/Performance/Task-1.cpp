@@ -1,0 +1,196 @@
+#include <iostream>
+#include <Gl/glut.h>
+#include <windows.h>
+#include <math.h>
+using namespace std;
+
+void circle(float radius, float xc, float yc)
+{
+    glBegin(GL_POLYGON);
+        for(int i = 0; i < 200; i++)
+        {
+            float pi = 3.1416;
+            float A = (i*2*pi)/200;
+            float x = radius * cos(A);
+            float y = radius * sin(A);
+            glVertex2f(x + xc, y + yc);
+        }
+	glEnd();
+}
+
+void semicircle(float radius, float xc, float yc)
+{
+    glBegin(GL_LINE_STRIP);
+        for(int i = 0; i <= 200; i++)
+        {
+            float pi = 3.1416;
+            float A = -(i*pi)/200;
+            float x = radius * cos(A);
+            float y = radius * sin(A);
+            glVertex2f(x + xc, y + yc);
+        }
+    glEnd();
+}
+
+float* parabola(float eqn_xCoeff, float eqn_const, float startX, float endX)
+{
+    float* yCoords = new float[2];
+    float y;
+    glBegin(GL_LINE_STRIP);
+        for (float x = startX; x <= endX; x+=0.01) 
+        {    
+            y = eqn_xCoeff * (x*x) + eqn_const; 
+            glVertex2f(x, y);
+            if (x == startX) {yCoords[0] = y;}
+        }
+    glEnd();
+    yCoords[1] = y;
+    return yCoords;
+}
+
+void star(float x0, float y0, float scale) {
+    const int numPoints = 5;
+    float outerRadius = scale;
+    float innerRadius = scale * 0.382;
+
+    float angleStep = 2 * M_PI / numPoints;
+    float centerAngle = M_PI;
+
+    glBegin(GL_TRIANGLE_FAN);
+    // Center point first
+    glVertex2f(x0, y0);
+    
+    // Draw the points
+    for (int i = 0; i <= numPoints * 2; i++) {  // <= to close the shape
+        float radius = (i % 2 == 0) ? outerRadius : innerRadius;
+        float angle = centerAngle + (i * angleStep / 2);
+        
+        float x = x0 + radius * sin(angle);
+        float y = y0 - radius * cos(angle);
+        glVertex2f(x, y);
+    }
+    glEnd();
+}
+
+
+void display() {
+    glClearColor(1, 1, 1, 1);
+    glClear(GL_COLOR_BUFFER_BIT);
+    
+    glLineWidth(2);
+
+    // Bangladesh
+    glBegin(GL_POLYGON);
+    glColor3f(0, 107.0/255.0, 81.0/255.0);
+
+    glVertex2f(-0.9, 0.2);
+    glVertex2f(-0.1, 0.2);
+    glVertex2f(-0.1, 0.7);
+    glVertex2f(-0.9, 0.7);
+    glEnd();
+
+    glColor3f(1, 0/255.0, 0/255.0);
+    circle(0.15, -0.55, 0.45);
+    
+
+    // Argentina
+    glBegin(GL_POLYGON);
+    glColor3f(102/255.0, 203/255.0, 255/255.0);
+
+
+    glVertex2f(0.1, 0.2);
+    glVertex2f(0.9, 0.2);
+    glVertex2f(0.9, 0.3666);
+    glVertex2f(0.1, 0.3666);
+    glEnd();
+
+
+    glBegin(GL_POLYGON);
+    glColor3f(255/255.0, 255/255.0, 255/255.0);
+
+    glVertex2f(0.1, 0.3666);
+    glVertex2f(0.9, 0.3666);
+    glVertex2f(0.9, 0.5666);
+    glVertex2f(0.1, 0.5666);
+    glEnd();
+
+
+    glBegin(GL_POLYGON);
+    glColor3f(102/255.0, 203/255.0, 255/255.0);
+
+    glVertex2f(0.1, 0.5666);
+    glVertex2f(0.9, 0.5666);
+    glVertex2f(0.9, 0.7333);
+    glVertex2f(0.1, 0.7333);
+    glEnd();
+
+
+
+    // Cameron
+    glBegin(GL_POLYGON);
+    glColor3f(0/255.0, 107/255.0, 63/255.0);
+
+    glVertex2f(-0.9, -0.7);
+    glVertex2f(-0.1, -0.7);
+    glVertex2f(-0.1, -0.5);
+    glVertex2f(-0.9, -0.5);
+    glEnd();
+
+
+    glBegin(GL_POLYGON);
+    glColor3f(252/255.0, 209/255.0, 22/255.0);
+
+    glVertex2f(-0.1, -0.5);
+    glVertex2f(-0.9, -0.5);
+    glVertex2f(-0.9, -0.3);
+    glVertex2f(-0.1, -0.3);
+    glEnd();
+
+
+    glBegin(GL_POLYGON);
+    glColor3f(206/255.0, 17/255.0, 38/255.0);
+
+    glVertex2f(-0.1, -0.3);
+    glVertex2f(-0.9, -0.3);
+    glVertex2f(-0.9, -0.1);
+    glVertex2f(-0.1, -0.1);
+    glEnd();
+
+    glColor3f(0/255.0, 0/255.0, 0/255.0);
+    star(-0.5, -0.4, 0.1);
+
+
+    // USA
+    float stripeHeight = (0.9 - 0.7) / 5.0;
+    float yStart = -0.7;
+    for (int i = 0; i < 15; ++i) {
+        glBegin(GL_POLYGON);
+        if (i % 2 == 0)
+            glColor3f(255/255.0, 0/255.0, 0/255.0);
+        else
+            glColor3f(255/255.0, 255/255.0, 255/255.0);
+
+        glVertex2f(0.1, yStart + i * stripeHeight);
+        glVertex2f(0.9, yStart + i * stripeHeight);
+        glVertex2f(0.9, yStart + (i + 1) * stripeHeight);
+        glVertex2f(0.1, yStart + (i + 1) * stripeHeight);
+        glEnd();
+    }
+
+
+
+    glFlush();
+}
+
+
+int main(int argc, char** argv) {
+    glutInit(&argc, argv);
+    glutInitWindowSize(500, 500);
+    glutCreateWindow("Performance Task-1");
+    glutDisplayFunc(display);
+
+    glutMainLoop();
+
+    
+    return 0;
+}

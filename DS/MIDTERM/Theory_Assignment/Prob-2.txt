@@ -1,0 +1,22 @@
+(a)
+struct Course {
+    char courseID[7];
+    char courseTitle[30];
+    int roomNumber;
+    int studentCount;
+}
+
+(b)
+Info (courses, N):
+    total <- 0
+    count <- 0
+    for i <- 0 to N-1 do
+        if Course[i].roomNumber = 1:
+            total <- total + course[i].StudentCount
+            count <- count + 1
+        end if
+    end for
+    return total
+    return count
+End Info
+

@@ -1,0 +1,39 @@
+class Queue:
+    private:
+        arr, maxSize, front, rear;
+    
+    public:
+        Queue(size):
+            maxSize <- size
+            arr <- new int[maxSize]
+            front <- -1
+            reat <- -1
+        
+        isEmpty():
+            RETURN (front = -1 || front > rear)
+        
+        isFull():
+            RETURN rear = mazSize-1
+        
+        enQueue(value):
+            IF isFull():
+                PRINT "Overflow"
+                RETURN
+            ELSE IF isEmpty():
+                front <- 0
+                rear <- 0
+            
+            arr[rear] = value
+            rear <- rear + 1
+
+        deQueue():
+            IF isEmpty():
+                PRINT "Underflow"
+                RETURN
+            front <- front + 1
+        
+        peek():
+            IF isEmpty():
+                PRINT "Empty"
+                RETURN
+            PRINT arr[front]

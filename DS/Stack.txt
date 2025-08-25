@@ -1,0 +1,33 @@
+class Stack:
+    arr, top, maxsize; 
+    public:
+        Stack(size)
+            maxsize <- size
+            top <- 0
+    
+    bool isEmpty():
+        return top = 0
+    
+    ~Stack():
+        delete[] arr
+
+    bool isFull();
+        return top = maxsize
+
+    push(value):
+        if isFull():
+            PRINT "overflow"
+        else:
+            arr[top] <- value
+            top <- top + 1
+    pop():
+        if isEmpty():
+            PRINT "underflow"
+        else:
+            top <- top - 1
+            
+    peek():
+        if isEmpty():
+            PRINT "Stack empty"
+        else 
+            arr[top-1]

@@ -1,0 +1,7 @@
+C:\Users\User\OneDrive - American International University-Bangladesh\codes\OOP2\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\User\OneDrive - American International University-Bangladesh\codes\OOP2\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\User\OneDrive - American International University-Bangladesh\codes\OOP2\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\User\OneDrive - American International University-Bangladesh\codes\OOP2\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive - American International University-Bangladesh\codes\OOP2\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive - American International University-Bangladesh\codes\OOP2\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\User\OneDrive - American International University-Bangladesh\codes\OOP2\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

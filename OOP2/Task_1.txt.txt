@@ -1,0 +1,100 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[][] jagged = new int[3][]
+            {
+                new int[] {1, 2, 8},
+                new int[] {3, 4, 10},
+                new int[] {5, 6}
+            };
+
+            int count = 0;
+
+            for (int i = 0; i < jagged.Length; i++)
+            {
+                for (int j = 0; j < jagged[i].Length; j++)
+                {
+                    if (jagged[i][j] % 2 == 0)
+                    {
+                        Console.WriteLine("{0} is even", jagged[i][j]);
+                        count++;
+                    }
+                }
+            }
+
+            Console.WriteLine("\nTotal even numbers: {0}", count);
+            Console.ReadLine();
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    class Bank_Account
+    {
+        public double amount;
+        public double sum;
+
+        public Bank_Account(double amount, double sum)
+        {
+            this.amount = amount;
+            this.sum = sum;
+        }
+
+        public void withdraw(double amount)
+        {
+            this.sum -= amount;
+        }
+
+        public void deposit(double amount)
+        {
+            this.sum += amount;
+        }
+
+        public void display()
+        {
+            Console.WriteLine(amount);
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Bank_Account acc1 = new Bank_Account(0, 1000);
+            Bank_Account acc2 = new Bank_Account(0, 0);
+            Bank_Account acc3 = new Bank_Account(0, 500);
+
+            Console.WriteLine("Original balance: ");
+            acc1.display();
+            acc1.withdraw(500);
+
+        }
+    }
+}
+

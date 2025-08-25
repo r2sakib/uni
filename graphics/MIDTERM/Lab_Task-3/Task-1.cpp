@@ -1,0 +1,118 @@
+#include <windows.h>
+#include <GL/glut.h>
+#include <stdlib.h>
+
+using namespace std;
+
+void display() {
+    glClearColor(1, 1, 1, 1);
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    glLineWidth(1);
+
+    glBegin(GL_LINE_STRIP);
+    glColor3f(1, 0, 0);
+    glVertex2f(-0.6, -0.9);
+    glVertex2f(0.6, -0.9);
+    glVertex2f(0.6, 0.9);
+    glVertex2f(-0.6, 0.9);
+    glVertex2f(-0.6, -0.9);
+    glEnd();
+
+    glBegin(GL_LINE_STRIP);
+    glColor3f(1, 0, 0);
+    glVertex2f(-0.6, -0.54);
+    glVertex2f(0.6, -0.54);
+    glEnd();
+
+    glBegin(GL_LINE_STRIP);
+    glColor3f(1, 0, 0);
+    glVertex2f(-0.6, -0.18);
+    glVertex2f(0.6, -0.18);
+    glEnd();
+
+    glBegin(GL_LINE_STRIP);
+    glColor3f(1, 0, 0);
+    glVertex2f(-0.6, 0.18);
+    glVertex2f(0.6, 0.18);
+    glEnd();
+
+    glBegin(GL_LINE_STRIP);
+    glColor3f(1, 0, 0);
+    glVertex2f(-0.6, 0.54);
+    glVertex2f(0.6, 0.54);
+    glEnd();
+
+    glBegin(GL_LINE_STRIP);
+    glColor3f(1, 0, 0);
+    glVertex2f(-0.6, 0.9);
+    glVertex2f(0.6, 0.9);
+    glEnd();
+
+
+    // DOOR
+    glBegin(GL_LINE_STRIP);
+    glColor3f(1, 0, 0);
+    glVertex2f(-0.10, -0.9);
+    glVertex2f(-0.10, -0.70);
+    glVertex2f(0.10, -0.70);
+    glVertex2f(0.10, -0.9);
+    glEnd();
+
+    // Window
+    float x1 = -0.4;
+    float x2 = -0.2;
+    float y1 = -0.83;
+    float y2 = -0.63;
+
+    for (int i = 1; i <= 5; i++) {
+        glBegin(GL_LINE_STRIP);
+        glColor3f(1, 0, 0);
+        glVertex2f(x1, y1);
+        glVertex2f(x2, y1);
+        glVertex2f(x2, y2);
+        glVertex2f(x1, y2);
+        glVertex2f(x1, y1);
+        glEnd();
+
+        y1 += 0.36;
+        y2 += 0.36;
+    }
+    
+
+    x1 = -0.4 + 0.6;
+    x2 = -0.2 + 0.6;
+    y1 = -0.83;
+    y2 = -0.63;
+
+    for (int i = 1; i <=5; i++) {
+        glBegin(GL_LINE_STRIP);
+        glColor3f(1, 0, 0);
+        glVertex2f(x1, y1);
+        glVertex2f(x2, y1);
+        glVertex2f(x2, y2);
+        glVertex2f(x1, y2);
+        glVertex2f(x1, y1);
+        glEnd();
+
+        y1 += 0.36;
+        y2 += 0.36;
+    }
+    
+
+    
+    glFlush();
+}
+
+
+int main(int argc, char** argv) {
+    glutInit(&argc, argv);
+    glutCreateWindow("Lab Task 3 - 1");
+    glutInitWindowSize(500, 500);
+    glutDisplayFunc(display);
+
+    glutMainLoop();
+
+
+    return 0;
+}

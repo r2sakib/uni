@@ -1,0 +1,7 @@
+C:\Users\User\OneDrive - American International University-Bangladesh\codes\OOP2\Inheritance\Inheritance\obj\Debug\Inheritance.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive - American International University-Bangladesh\codes\OOP2\Inheritance\Inheritance\obj\Debug\Inheritance.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive - American International University-Bangladesh\codes\OOP2\Inheritance\Inheritance\bin\Debug\Inheritance.exe.config
+C:\Users\User\OneDrive - American International University-Bangladesh\codes\OOP2\Inheritance\Inheritance\bin\Debug\Inheritance.exe
+C:\Users\User\OneDrive - American International University-Bangladesh\codes\OOP2\Inheritance\Inheritance\bin\Debug\Inheritance.pdb
+C:\Users\User\OneDrive - American International University-Bangladesh\codes\OOP2\Inheritance\Inheritance\obj\Debug\Inheritance.exe
+C:\Users\User\OneDrive - American International University-Bangladesh\codes\OOP2\Inheritance\Inheritance\obj\Debug\Inheritance.pdb

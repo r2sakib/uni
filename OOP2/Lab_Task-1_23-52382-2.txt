@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr1 = new int[6];
+
+            Console.WriteLine("Enter 6 elements: ");
+            for (int i = 0; i < 6; i++)
+            {
+                arr1[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            int index;
+            Console.WriteLine("Enter one index number: ");
+            index = Convert.ToInt32(Console.ReadLine());
+
+            if (arr1[index] % 2 == 0)
+            {
+                Console.WriteLine("{0} is even", arr1[index]);
+            } 
+            else
+            {
+                Console.WriteLine("{0} is odd", arr1[index]);
+            }
+            Console.WriteLine();
+
+            int count = 0;
+            foreach (int num in arr1)
+            {
+                bool flag = true;
+                for (int i = 2; i < num; i++)
+                {
+                    if (num % i == 0)
+                    {
+                        flag = false;
+                        break;
+                    }
+                }
+
+                if (flag == true)
+                {
+                    Console.WriteLine("{0} is prime", num);
+                    count++;
+                }
+                else
+                    Console.WriteLine("{0} is not prime", num);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Number of primes: " + count);
+
+            Console.ReadLine();
+
+
+
+        }
+}
+}

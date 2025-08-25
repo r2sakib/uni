@@ -1,0 +1,61 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\OneDrive - American International University-Bangladesh\\codes\\OOP2\\ConsoleApp4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{717543B2-E0DB-46B6-8F86-35C9BB3C8955}|ConsoleApp4\\ConsoleApp4.vbproj|c:\\users\\user\\onedrive - american international university-bangladesh\\codes\\oop2\\consoleapp4\\consoleapp4\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{717543B2-E0DB-46B6-8F86-35C9BB3C8955}|ConsoleApp4\\ConsoleApp4.vbproj|solutionrelative:consoleapp4\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Module1.vb",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive - American International University-Bangladesh\\codes\\OOP2\\ConsoleApp4\\ConsoleApp4\\Module1.vb",
+              "RelativeDocumentMoniker": "ConsoleApp4\\Module1.vb",
+              "ToolTip": "C:\\Users\\User\\OneDrive - American International University-Bangladesh\\codes\\OOP2\\ConsoleApp4\\ConsoleApp4\\Module1.vb",
+              "RelativeToolTip": "ConsoleApp4\\Module1.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-24T15:09:05.761Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

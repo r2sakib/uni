@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\OneDrive - American International University-Bangladesh\\codes\\OOP2\\Inheritance\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BEB7377E-E3A8-4919-888C-2D93D1CF7668}|Inheritance\\Inheritance.csproj|c:\\users\\user\\onedrive - american international university-bangladesh\\codes\\oop2\\inheritance\\inheritance\\probationstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEB7377E-E3A8-4919-888C-2D93D1CF7668}|Inheritance\\Inheritance.csproj|solutionrelative:inheritance\\probationstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEB7377E-E3A8-4919-888C-2D93D1CF7668}|Inheritance\\Inheritance.csproj|c:\\users\\user\\onedrive - american international university-bangladesh\\codes\\oop2\\inheritance\\inheritance\\scholarshipstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEB7377E-E3A8-4919-888C-2D93D1CF7668}|Inheritance\\Inheritance.csproj|solutionrelative:inheritance\\scholarshipstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEB7377E-E3A8-4919-888C-2D93D1CF7668}|Inheritance\\Inheritance.csproj|c:\\users\\user\\onedrive - american international university-bangladesh\\codes\\oop2\\inheritance\\inheritance\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEB7377E-E3A8-4919-888C-2D93D1CF7668}|Inheritance\\Inheritance.csproj|solutionrelative:inheritance\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEB7377E-E3A8-4919-888C-2D93D1CF7668}|Inheritance\\Inheritance.csproj|c:\\users\\user\\onedrive - american international university-bangladesh\\codes\\oop2\\inheritance\\inheritance\\currstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEB7377E-E3A8-4919-888C-2D93D1CF7668}|Inheritance\\Inheritance.csproj|solutionrelative:inheritance\\currstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEB7377E-E3A8-4919-888C-2D93D1CF7668}|Inheritance\\Inheritance.csproj|c:\\users\\user\\onedrive - american international university-bangladesh\\codes\\oop2\\inheritance\\inheritance\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEB7377E-E3A8-4919-888C-2D93D1CF7668}|Inheritance\\Inheritance.csproj|solutionrelative:inheritance\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProbationStudent.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive - American International University-Bangladesh\\codes\\OOP2\\Inheritance\\Inheritance\\ProbationStudent.cs",
+              "RelativeDocumentMoniker": "Inheritance\\ProbationStudent.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive - American International University-Bangladesh\\codes\\OOP2\\Inheritance\\Inheritance\\ProbationStudent.cs",
+              "RelativeToolTip": "Inheritance\\ProbationStudent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T10:14:54.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ScholarshipStudent.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive - American International University-Bangladesh\\codes\\OOP2\\Inheritance\\Inheritance\\ScholarshipStudent.cs",
+              "RelativeDocumentMoniker": "Inheritance\\ScholarshipStudent.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive - American International University-Bangladesh\\codes\\OOP2\\Inheritance\\Inheritance\\ScholarshipStudent.cs",
+              "RelativeToolTip": "Inheritance\\ScholarshipStudent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T10:11:56.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CurrStudent.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive - American International University-Bangladesh\\codes\\OOP2\\Inheritance\\Inheritance\\CurrStudent.cs",
+              "RelativeDocumentMoniker": "Inheritance\\CurrStudent.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive - American International University-Bangladesh\\codes\\OOP2\\Inheritance\\Inheritance\\CurrStudent.cs",
+              "RelativeToolTip": "Inheritance\\CurrStudent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T10:11:26.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive - American International University-Bangladesh\\codes\\OOP2\\Inheritance\\Inheritance\\Student.cs",
+              "RelativeDocumentMoniker": "Inheritance\\Student.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive - American International University-Bangladesh\\codes\\OOP2\\Inheritance\\Inheritance\\Student.cs",
+              "RelativeToolTip": "Inheritance\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T10:10:50.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive - American International University-Bangladesh\\codes\\OOP2\\Inheritance\\Inheritance\\Program.cs",
+              "RelativeDocumentMoniker": "Inheritance\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive - American International University-Bangladesh\\codes\\OOP2\\Inheritance\\Inheritance\\Program.cs",
+              "RelativeToolTip": "Inheritance\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T10:09:02.371Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

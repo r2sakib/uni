@@ -1,0 +1,34 @@
+STRUCT Node:
+    ID: String
+    Name: String
+    CGPA: Float
+    left: Node
+    right: Node
+
+FUNCTION createNode(ID, Name, CGPA):
+    newNode <- NEW Node
+    newNode.ID <- ID
+    newNode.Name <- Name
+    newNode.CGPA <- CGPA
+    newNode.left <- NULL
+    newNode.right <- NULL
+    RETURN newNode
+
+FUNCTION insert(root, ID, Name, CGPA):
+    IF root IS NULL:
+        RETURN createNode(ID, Name, CGPA)
+    IF ID < root.ID:
+        root.left <- insert(root.left, ID, Name, CGPA)
+    ELSE IF ID > root.ID:
+        root.right <- insert(root.right, ID, Name, CGPA)
+    RETURN root
+
+FUNCTION search(root, ID):
+    IF root IS NULL:
+        RETURN FALSE
+    IF root.ID == ID:
+        RETURN TRUE
+    ELSE IF ID < root.ID:
+        RETURN search(root.left, ID)
+    ELSE:
+        RETURN search(root.right, ID)

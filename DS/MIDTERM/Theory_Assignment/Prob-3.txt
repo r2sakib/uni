@@ -1,0 +1,14 @@
+MinimumRating (Ratings, n):
+    diff <- Ratings[0]
+    for i <- 0 to n-1 do
+        for j <- 0 to n-1 do
+            if i != j:
+            if |Ratings[i] - Ratings[j]| < diff:
+                diff <- Ratings[i] - Ratings[j]
+            end if
+            end if
+        end for
+    end for
+
+    return diff
+End MinimumRating

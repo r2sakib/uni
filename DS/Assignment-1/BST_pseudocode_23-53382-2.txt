@@ -1,0 +1,52 @@
+CLASS Node:
+    ID: String
+    Name: String
+    CGPA: Float
+    left: Node
+    right: Node
+
+    Node(id, name, cgpa):
+        ID <- id
+        Name <- name
+        CGPA <- cgpa
+        left <- NULL
+        right <- NULL
+
+    createNode(ID, Name, CGPA):
+        newNode <- NEW Node
+        newNode.Node(ID, Name, CGPA)
+        RETURN newNode
+
+    insert(root, ID, Name, CGPA):
+        IF root IS NULL:
+            RETURN createNode(ID, Name, CGPA)
+        IF ID < root.ID:
+            root.left <- insert(root.left, ID, Name, CGPA)
+        ELSE IF ID > root.ID:
+            root.right <- insert(root.right, ID, Name, CGPA)
+        RETURN root
+
+search(root, ID):
+    IF root IS NULL:
+        RETURN FALSE
+    IF root.ID == ID:
+        RETURN TRUE
+    ELSE IF ID < root.ID:
+        RETURN search(root.left, ID)
+    ELSE:
+        RETURN search(root.right, ID)
+
+MAIN:
+    root <- NULL
+    insert(root, "23-52382-2", "Sadman", 3.58)
+    insert(root, "23-54323-2", "Swad", 2.89)
+    insert(root, "24-32532-1", "Anonto", 2.76)
+    insert(root, "22-32143-3", "Emon", 3.73)
+    insert(root, "20-32454-3", "Adit", 3.98)
+
+    searchID <- INPUT "Enter ID to search: "
+    
+    IF search(root, searchID) IS TRUE:
+        PRINT searchID, "found."
+    ELSE:
+        PRINT searchID, "not found."
